@@ -1,0 +1,41 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Social Network</title>
+    <link rel="stylesheet" href="{% static 'external/font-awesome/css/font-awesome.css' %}">
+    <link href="{% sass_src 'style.scss' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>what a social network !</h1>
+        <div class="container">
+            <nav class="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+                    <li><a href="#">slt</a></li>
+                    <li><a href="#">lel</a></li>
+                    <li><a href="#">idk</a></li>
+                    <li><a href="#">what</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </main>
+    <footer>
+        <p>itsafooter</p>
+    </footer>
+    {% block scripts %}
+    {% endblock scripts %}
+    <script src="{% static 'external/jquery/dist/jquery.min.js' %}"></script>
+</body>
+</html>
